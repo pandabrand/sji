@@ -1,0 +1,108 @@
+/*
+ * Theme Name: SJI-underscore
+ *
+ * Layout: Content-Sidebar
+ *
+ * Learn more: https://developer.wordpress.org/themes/basics/template-files/
+*/
+
+.content-footer {
+  padding-bottom: 44px;
+}
+
+@media only screen and (max-width: 600px) {
+  .site-content {
+    padding-top: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .cover-img {
+    background: url('../images/freedom_banner-2.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+  }
+  
+  #content {
+    background: $white;
+  }
+    /* For tablets: */
+
+  .content-area {
+	float: left;
+	width: 100%;
+  }
+
+  .site-main {
+  }
+
+  .site-content .widget-area {
+	float: right;
+	overflow: hidden;
+	width: 100%;
+  }
+
+  .site-content {
+	margin: 0 auto;
+  }
+  
+  .front-content {
+    width: 90%;
+  }
+  
+  .site-inner {
+    max-width: 600px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+    /* For desktop: */
+  .cover-img {
+    background: url('../images/freedom_banner-2.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+  }
+  
+  #content {
+    background: $white;
+  }
+
+  .content-area {
+	float: left;
+/* 	margin: 0 -25% 0 0; */
+	width: 100%;
+  }
+
+  .site-main {
+/* 	margin: 0 25% 0 0; */
+  }
+
+  .site-content .widget-area {
+    margin-top: 0 25% 0 0;
+    
+	float: right;
+	overflow: hidden;
+	width: 25%;
+  }
+
+  .site-content {
+	margin: 0 auto;
+  }
+  
+  .front-content {
+    width: 90%;
+  }
+  
+  .site-inner {
+    max-width: 1024px;
+  }
+
+  #secondary {
+    margin-top: 20px;
+    padding-right: 15px;
+  }
+}
