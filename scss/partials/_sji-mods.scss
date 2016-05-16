@@ -43,6 +43,28 @@
     font-family: Gentium Book Basic;
 }
 
+.prezi-wrapper {
+  max-height: 100%;
+  max-width: 960px;
+  overflow: hidden;
+  .prezi-wrapper-container-960x480 {
+    padding-bottom: 50%;
+  }
+  .prezi-container {
+    position: relative;
+    height: 0;
+    iframe {
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
 @media only screen and (max-width: 500px) {
   #secondary {
 	width: 100%;
@@ -284,6 +306,15 @@ article.post {
    list-style: none outside none;
    margin: 0 0 3em;
   }
+  
+  ul.square {
+    list-style: square inside none;
+    margin: 0 0 3em;
+    li {
+      margin: 0 0 1.5em 0;
+    }
+  }
+  
   .fltrt {
     img {
       display: block;
@@ -368,7 +399,7 @@ ul.button-links {
   a {
     border-top: 1px solid $oatmeal;
     background: $orange;
-    padding: 20px 40px;
+    padding: 10px 20px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -380,15 +411,21 @@ ul.button-links {
     font-size: 19px;
     font-family: $lato;
     text-decoration: none;
+    text-transform: uppercase;
     vertical-align: middle;
     &:hover {
-      border-top-color: $vermillion;
-      background: $burgundy;
-      color: $off-white;
+	  -webkit-box-shadow: rgba(124, 80, 18, 1) 0 1px 0;
+	  -moz-box-shadow: rgba(124, 80, 18, 1) 0 1px 0;
+	  box-shadow: rgba(124, 80, 18, 1) 0 1px 0;
+      background: $light-orange;
+      color: $white;
     }
     &:active {
-      border-top-color: $vermillion;
-      background: $burgundy;
+	  -webkit-box-shadow: rgba(124, 80, 18, 1) 0 1px 0;
+	  -moz-box-shadow: rgba(124, 80, 18, 1) 0 1px 0;
+	  box-shadow: rgba(124, 80, 18, 1) 0 1px 0;
+      background: $light-orange;
+      color: $white;
     }
   }
  }
@@ -397,6 +434,33 @@ ul.button-links {
 .breadcrumbs {
   margin-left: 30px;
 }
+
+.event-date {
+  font-size: .75em;
+  color: $dark-orange;
+  .wpcf-field-date {
+    display: inline-block;
+  }
+}
+
+.post-navigation, .posts-navigation {
+  margin-left: 4.25em !important;
+  margin-right: 4.25em !important;
+  font-size: .75em;  
+}
+
+.nav-previous a {
+  &:before {
+    content: "\00ab";
+  }
+}
+
+.nav-next a {
+  &:after {
+    content: "\00bb";
+  }
+}
+
 
 @media only screen and (min-width: 481px) {
   .profile-well {

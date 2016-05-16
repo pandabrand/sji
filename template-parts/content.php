@@ -28,6 +28,7 @@
 				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'sji-underscore' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
+            echo '<div class="event-date">Event Date: '. types_render_field("post-date", array("style"=>"text","show_name"=>"false","output"=>"html","format"=>"l, M j, Y")) .'</div>';
 
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'sji-underscore' ),
@@ -37,11 +38,5 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php sji_underscore_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-		<?php sji_underscore_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

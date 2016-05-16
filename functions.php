@@ -313,3 +313,13 @@ function fpw_add_post_type_to_feature( $post_types ) {
 	array_push($post_types, 'program', 'project');
 	return $post_types;
 }
+
+function sort_by_custom_date($query) {
+  if($query->is_archive()) {
+    $query->set('orderby','meta_value_num');
+    $query->set('meta_key','wpcf-post-date');
+    $query->set('order','ASC');
+  }
+  return $query;
+}
+add_action( 'pre_get_posts', 'sort_by_custom_date' );

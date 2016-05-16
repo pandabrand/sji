@@ -23,6 +23,8 @@
 	<div class="entry-content">
 		<?php
 			the_content();
+			
+            echo '<div class="event-date">Event Date: '. types_render_field("post-date", array("style"=>"text","show_name"=>"false","output"=>"html","format"=>"l, M j, Y")) .'</div>';
 
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'sji-underscore' ),
